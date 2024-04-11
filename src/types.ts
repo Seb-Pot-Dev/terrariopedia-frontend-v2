@@ -27,20 +27,20 @@ export interface Options {
     | boolean;
 }
 
-export interface Products {
-  items: Product[];
+export interface Animals {
+  items: Animal[];
   total: number;
   page: number;
   perPage: number;
   totalPages: number;
 }
 
-export interface Product {
+export interface Animal {
   id?: number;
-  price: string;
   name: string;
+  species: string; 
+  habitat: string; 
   image: string;
-  rating: number;
 }
 
 export interface PaginationParams {
