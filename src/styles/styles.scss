@@ -13,3 +13,10 @@ app-root{
     flex-direction: column;
 }
 
+.wrapper{
+    height: auto;
+    padding: 20px;
+    width: 100%;
+    flex-grow: 1;
+    border-bottom: 1px solid var(--border-color);
+}
