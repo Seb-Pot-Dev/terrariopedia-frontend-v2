@@ -1,8 +1,14 @@
-/* Import styles */
-@import "./styles/styles.scss";
-@import "./styles/variables.scss";
-
-/* Import TailwindCSS directives */
+/* 1. Reset style de base avec tailwind "preflight" */
 @tailwind base;
+
+/* 2. Import PrimeNG styles */
+@import "primeng/resources/themes/aura-dark-lime/theme.css";
+@import "primeng/resources/primeng.css";
+
+/* 3. Import des styles Tailwind */
 @tailwind components;
 @tailwind utilities;
+
+/* 4. Import des styles perso */
+@import "./styles/styles.scss";
+@import "./styles/variables.scss";

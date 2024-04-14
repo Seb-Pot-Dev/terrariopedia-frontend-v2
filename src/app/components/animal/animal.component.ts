@@ -9,5 +9,6 @@ import { Animal } from '../../../types';
   styleUrl: './animal.component.scss'
 })
 export class AnimalComponent {
+  // "!" signifie que la propriété ne sera pas nulle
   @Input() animal!: Animal;
 }
