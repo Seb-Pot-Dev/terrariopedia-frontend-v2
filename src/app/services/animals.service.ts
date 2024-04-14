@@ -3,7 +3,6 @@ import { ApiService } from './api.service';
 import { Observable } from 'rxjs';
 import { PaginationParams, Animals } from '../../types';
 
-// cela signifie que le service est disponible globalement dans l'application.
 @Injectable({
   providedIn: 'root',
 })
