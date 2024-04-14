@@ -2,13 +2,27 @@
 @tailwind base;
 
 /* 2. Import PrimeNG styles */
-@import "primeng/resources/themes/aura-dark-lime/theme.css";
+
 @import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
 
 /* 3. Import des styles Tailwind */
 @tailwind components;
 @tailwind utilities;
 
-/* 4. Import des styles perso */
+// 4. Ajout d'utilities persos
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+/* 5. Import des styles perso */
 @import "./styles/styles.scss";
 @import "./styles/variables.scss";

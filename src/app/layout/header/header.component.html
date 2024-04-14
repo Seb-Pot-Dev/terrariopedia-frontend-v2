@@ -1,14 +1,18 @@
-<header class="tw-w-full tw-border-b-2 tw-border-borderColor tw-p-1">
-  <div class="tw-flex tw-items-center">
-    <img
-      src="assets/images/icons/lezard.png"
-      alt="terrariopedia icon"
-      class="logo"
-      class="tw-w-8 tw-p-1"
-    />
-    <div class="tw-flex tw-items-center tw-border-2 tw-border-borderColor">
-      <div class="tw-bg-borderColor  tw-text-white tw-p-1"><p>Terrario</p></div>
-      <div class="tw-bg-gray-100  tw-text-black tw-p-1"><p>pedia</p></div>
-    </div>
+
+
+<p-toolbar>
+  <div class="p-toolbar-group-start">
+      <button pButton icon="pi pi-plus" class="mr-2"></button>
+      <button pButton icon="pi pi-print" class="mr-2"></button>
+      <button pButton icon="pi pi-upload"></button>
   </div>
-</header>
+  <div class="p-toolbar-group-center">
+      <span class="p-input-icon-left">
+          <i class="pi pi-search"></i>
+          <input pInputText placeholder="Search" />
+      </span>
+  </div>
+  <div class="p-toolbar-group-end">
+    <p-inputSwitch (onChange)="toggleTheme()"></p-inputSwitch>
+  </div>
+</p-toolbar>
