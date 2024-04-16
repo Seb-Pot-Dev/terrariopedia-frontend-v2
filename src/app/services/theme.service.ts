@@ -1,19 +1,21 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class ThemeService {
-  private themeDark = false;
+  activeTheme: string = 'dark';
 
-  toggleTheme(): void {
-    const themeLink = document.getElementById('theme-link') as HTMLLinkElement;
-    if (themeLink) {
-      // Vérifie l'attribut href actuel et bascule entre les thèmes
-      themeLink.href = themeLink.href.includes('dark.css') ? 'light.css' : 'dark.css';
-    } else {
-      console.error('Theme link element not found!');
-    }
+  getTheme() {
+    return this.activeTheme;
   }
-  
+
+  setTheme(theme: string): void {
+    let themeLink = document.getElementById('app-theme') as HTMLLinkElement;
+
+    if (themeLink) {
+      themeLink.href = theme + '.css';
+    }
+    this.activeTheme = theme;
+  }
 }

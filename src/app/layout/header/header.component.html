@@ -1,10 +1,6 @@
-
-
 <p-toolbar>
   <div class="p-toolbar-group-start">
-      <button pButton icon="pi pi-plus" class="mr-2"></button>
-      <button pButton icon="pi pi-print" class="mr-2"></button>
-      <button pButton icon="pi pi-upload"></button>
+    <p>TerrarioPEDIA</p>
   </div>
   <div class="p-toolbar-group-center">
       <span class="p-input-icon-left">
@@ -13,6 +9,6 @@
       </span>
   </div>
   <div class="p-toolbar-group-end">
-    <p-inputSwitch (onChange)="toggleTheme()"></p-inputSwitch>
+    <p-inputSwitch [(ngModel)]="checked" (click)="onThemeChange(checked ? 'dark' : 'light')"></p-inputSwitch>
   </div>
 </p-toolbar>
